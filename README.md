@@ -2,7 +2,7 @@
 
 El proyecto consistirá en el **diseño** de una aplicación Android y su **implementación** posterior.
 La idea principal es demostrar que se han adquirido los conocimientos presentados a lo largo de la unidad formativa. Por tanto, se trata de un proyecto **individual** y **original**. 
-Pueden utilizarse como punto de partida los proyectos realizados en clase (siempre y cuando no se limiten a ser meras copias de los ya vistos), pero teniendo en cuenta que la originalidad de la propuesta es un factor a tener en cuenta en la calificación. En todo caso, se trata de un proyecto **SIMPLE** y **COMPLETO**. Es decir, que seáis capaces tanto de diseñarlo en su conjunto como de implementarlo de principio a fin. Es más importante que os centréis en tener un producto cerrado, aún siendo simple, que en añadir funcionalidades complejas. 
+Pueden utilizarse como punto de partida los proyectos realizados en clase (siempre y cuando no se limiten a ser meras copias de los ya vistos), pero teniendo en cuenta que la originalidad de la propuesta es un factor a tener en cuenta en la calificación. En todo caso, se trata de un proyecto **SIMPLE** y **COMPLETO**. Es decir, que seáis capaces tanto de diseñarlo en su conjunto como de implementarlo de principio a fin. Es más importante que os centréis en tener un producto cerrado, aún siendo simple, que en añadir funcionalidades complejas.     
 
 ## Requisitos de Diseño
 
