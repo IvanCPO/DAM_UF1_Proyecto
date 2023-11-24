@@ -5,6 +5,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.uf1_proyecto.adapter.ItemAdapter
+import com.example.uf1_proyecto.data.Datasource
 import com.example.uf1_proyecto.databinding.FragmentRegisterBinding
 import com.example.uf1_proyecto.databinding.FragmentTestBinding
 
@@ -21,6 +23,11 @@ class TestFragment : Fragment() {
 //        return inflater.inflate(R.layout.fragment_introduce, container, false)
         _binding = FragmentTestBinding.inflate(inflater,container,false)
         var view = binding.root
+        val myDataset = Datasource().loadQuestions()
+        val recyclerView = binding.recyclerView
+
+        recyclerView.adapter = ItemAdapter (  myDataset)
+        recyclerView.setHasFixedSize(true)
         return view
     }
 }
