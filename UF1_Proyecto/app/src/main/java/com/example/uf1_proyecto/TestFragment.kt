@@ -26,7 +26,7 @@ class TestFragment : Fragment() {
         val myDataset = Datasource().loadQuestions()
         val recyclerView = binding.recyclerView
 
-        recyclerView.adapter = ItemAdapter (  myDataset)
+        //recyclerView.adapter = ItemAdapter (activity.context, myDataset)
         recyclerView.setHasFixedSize(true)
         return view
     }
