@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.example.uf1_proyecto.data.Person
 import com.example.uf1_proyecto.databinding.FragmentRegisterBinding
 import com.example.uf1_proyecto.databinding.FragmentUserBinding
 
@@ -21,6 +22,8 @@ class UserFragment : Fragment() {
 //        return inflater.inflate(R.layout.fragment_introduce, container, false)
         _binding = FragmentUserBinding.inflate(inflater,container,false)
         var view = binding.root
+//        binding.profileUsername = Person.userName
+//        binding.pictureUser.profilePicture = Person.picture
         return view
     }
 }

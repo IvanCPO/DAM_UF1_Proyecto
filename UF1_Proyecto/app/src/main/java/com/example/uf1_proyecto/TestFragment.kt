@@ -5,15 +5,17 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
 import com.example.uf1_proyecto.adapter.ItemAdapter
 import com.example.uf1_proyecto.data.Datasource
-import com.example.uf1_proyecto.databinding.FragmentRegisterBinding
+import com.example.uf1_proyecto.data.Question
 import com.example.uf1_proyecto.databinding.FragmentTestBinding
 
 class TestFragment : Fragment() {
 
     var _binding : FragmentTestBinding? = null
     val binding get() = _binding!!
+    var myDataset: List<Question>? = null
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,11 +25,13 @@ class TestFragment : Fragment() {
 //        return inflater.inflate(R.layout.fragment_introduce, container, false)
         _binding = FragmentTestBinding.inflate(inflater,container,false)
         var view = binding.root
-        val myDataset = Datasource().loadQuestions()
-        val recyclerView = binding.recyclerView
+        myDataset = Datasource().loadQuestionsCompatibility()
+        val recyclerView = binding.root.findViewById<RecyclerView>(R.id.recycler_view)
+//        recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
-        //recyclerView.adapter = ItemAdapter (activity.context, myDataset)
-        recyclerView.setHasFixedSize(true)
+        val itemAdapter = ItemAdapter(myDataset!!)
+        recyclerView.adapter = itemAdapter
+        recyclerView.isNestedScrollingEnabled = false
         return view
     }
 }
