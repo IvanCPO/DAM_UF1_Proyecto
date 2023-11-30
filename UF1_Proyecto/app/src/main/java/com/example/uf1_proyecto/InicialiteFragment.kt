@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.fragment.app.findFragment
 import androidx.navigation.findNavController
 import com.example.uf1_proyecto.databinding.FragmentInicialiteBinding
@@ -26,7 +27,17 @@ class InicialiteFragment : Fragment() {
             view.findNavController().navigate(R.id.action_inicialiteFragment_to_registerFragment)
         }
         binding.buttonAccept.setOnClickListener {
-            view.findNavController().navigate(R.id.action_inicialiteFragment_to_testFragment)
+            if (PeopleViewModel.takeUser(binding.inicialiteUsername.text.toString(), binding.inicialitePassword.text.toString()) != null)
+                view.findNavController().navigate(R.id.action_inicialiteFragment_to_testFragment)
+            else{
+                Toast.makeText(
+                    activity,
+                    "El usuario o la contraseña son incorrectos. Puede que no se haya registrado. Primero empiece con eso",
+                    Toast.LENGTH_LONG
+                ).show()
+                binding.inicialiteUsername.setText("")
+                binding.inicialitePassword.setText("")
+            }
         }
         return view
 

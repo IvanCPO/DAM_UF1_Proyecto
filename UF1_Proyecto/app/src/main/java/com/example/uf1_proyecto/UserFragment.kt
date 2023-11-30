@@ -22,8 +22,8 @@ class UserFragment : Fragment() {
 //        return inflater.inflate(R.layout.fragment_introduce, container, false)
         _binding = FragmentUserBinding.inflate(inflater,container,false)
         var view = binding.root
-//        binding.profileUsername = Person.userName
-//        binding.pictureUser.profilePicture = Person.picture
+        binding.profileUsername.setText(PeopleViewModel.userUse!!.userName)
+        binding.pictureUser.profilePicture.setImageResource(PeopleViewModel.userUse!!.picture)
         return view
     }
 }

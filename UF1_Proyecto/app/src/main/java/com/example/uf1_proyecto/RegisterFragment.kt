@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
-import androidx.fragment.app.findFragment
 import androidx.navigation.findNavController
 import com.example.uf1_proyecto.databinding.FragmentRegisterBinding
 
@@ -24,7 +23,9 @@ class RegisterFragment : Fragment() {
         _binding = FragmentRegisterBinding.inflate(inflater,container,false)
         var view = binding.root
         binding.buttonStart.setOnClickListener {
-            if (!binding.password.text.toString().equals(binding.repitPassword.text.toString())) {
+            val userValue = binding.password.text.toString()
+            val passValue = binding.repitPassword.text.toString()
+            if (!userValue.equals(passValue)) {
                 Toast.makeText(
                     activity,
                     "La contraseña no es correcta. No son iguales",
@@ -34,6 +35,7 @@ class RegisterFragment : Fragment() {
                 binding.repitPassword.setText("")
                 
             }else{
+                PeopleViewModel.addUser(userValue,passValue)
                 view.findNavController().navigate(R.id.action_registerFragment_to_testFragment)
             }
         }
