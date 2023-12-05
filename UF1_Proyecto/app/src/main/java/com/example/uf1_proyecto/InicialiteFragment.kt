@@ -1,5 +1,6 @@
 package com.example.uf1_proyecto
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,9 +28,10 @@ class InicialiteFragment : Fragment() {
             view.findNavController().navigate(R.id.action_inicialiteFragment_to_registerFragment)
         }
         binding.buttonAccept.setOnClickListener {
-            if (PeopleViewModel.takeUser(binding.inicialiteUsername.text.toString(), binding.inicialitePassword.text.toString()) != null)
-                view.findNavController().navigate(R.id.action_inicialiteFragment_to_testFragment)
-            else{
+            if (PeopleViewModel.takeUser(binding.inicialiteUsername.text.toString(), binding.inicialitePassword.text.toString()) != null){
+            var intent = Intent(activity, ContentActivity::class.java)
+            startActivity( intent)
+            }else{
                 Toast.makeText(
                     activity,
                     "El usuario o la contraseña son incorrectos. Puede que no se haya registrado. Primero empiece con eso",
@@ -40,6 +42,13 @@ class InicialiteFragment : Fragment() {
             }
         }
         return view
+
+    }
+
+    override fun onResume() {
+        super.onResume()
+        binding.inicialiteUsername.setText("")
+        binding.inicialitePassword.setText("")
 
     }
 

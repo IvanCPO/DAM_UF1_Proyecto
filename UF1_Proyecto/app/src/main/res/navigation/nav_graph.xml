@@ -9,12 +9,7 @@
         android:id="@+id/registerFragment"
         android:name="com.example.uf1_proyecto.RegisterFragment"
         android:label="fragment_register"
-        tools:layout="@layout/fragment_register" >
-        <action
-            android:id="@+id/action_registerFragment_to_testFragment"
-            app:destination="@id/testFragment"
-            app:popUpTo="@id/inicialiteFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_register" />
     <fragment
         android:id="@+id/inicialiteFragment"
         android:name="com.example.uf1_proyecto.InicialiteFragment"
@@ -24,21 +19,5 @@
             android:id="@+id/action_inicialiteFragment_to_registerFragment"
             app:destination="@id/registerFragment"
             app:popUpTo="@id/inicialiteFragment" />
-        <action
-            android:id="@+id/action_inicialiteFragment_to_testFragment"
-            app:destination="@id/testFragment"
-            app:popUpTo="@id/inicialiteFragment" />
     </fragment>
-    <fragment
-        android:id="@+id/testFragment"
-        android:name="com.example.uf1_proyecto.TestFragment"
-        android:label="TestFragment" >
-        <action
-            android:id="@+id/action_testFragment_to_userFragment"
-            app:destination="@id/userFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/userFragment"
-        android:name="com.example.uf1_proyecto.UserFragment"
-        android:label="UserFragment" />
 </navigation>

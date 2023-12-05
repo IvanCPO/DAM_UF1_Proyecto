@@ -1,12 +1,11 @@
-package com.example.uf1_proyecto
+package com.example.uf1_proyecto.content
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.uf1_proyecto.data.Person
-import com.example.uf1_proyecto.databinding.FragmentRegisterBinding
+import com.example.uf1_proyecto.PeopleViewModel
 import com.example.uf1_proyecto.databinding.FragmentUserBinding
 
 class UserFragment : Fragment() {

@@ -1,4 +1,4 @@
-package com.example.uf1_proyecto
+package com.example.uf1_proyecto.content
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uf1_proyecto.R
 import com.example.uf1_proyecto.adapter.ItemAdapter
 import com.example.uf1_proyecto.data.Datasource
 import com.example.uf1_proyecto.data.Question
@@ -34,9 +35,6 @@ class TestFragment : Fragment() {
         val itemAdapter = ItemAdapter(myDataset!!)
         recyclerView.adapter = itemAdapter
         recyclerView.isNestedScrollingEnabled = false
-        binding.buttonResults.setOnClickListener {
-            view.findNavController().navigate(R.id.action_testFragment_to_userFragment)
-        }
 
 
 //        val drawerLayout = binding.drawerLayout
