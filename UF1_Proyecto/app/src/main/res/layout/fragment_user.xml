@@ -1,47 +1,152 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
+<androidx.core.widget.NestedScrollView
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:orientation="horizontal"
+    android:layout_height="match_parent"
     >
-
-    <include
-        android:id="@+id/picture_user"
-        layout="@layout/picture_person"
-        android:layout_width="175dp"
-        android:layout_height="175dp"
-        android:layout_margin="30dp" />
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="match_parent"
         android:layout_gravity="center"
-        android:orientation="vertical">
-        <TextView
-            android:layout_width="wrap_content"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Username:"/>
+
+            android:orientation="horizontal" >
+            <include
+                android:id="@+id/picture_user"
+                layout="@layout/picture_person"
+                android:layout_width="175dp"
+                android:layout_height="175dp"
+                android:layout_margin="30dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginRight="10dp"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Nombre usuario:"/>
 
 
 
-        <EditText
-            android:id="@+id/profile_username"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="text"
-            android:hint="UserName" />
+                <TextView
+                    android:id="@+id/profile_username"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="text"
+                    android:textSize="20sp"
+                    android:text="UserName" />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:id="@+id/button_change"
+                    android:text="Configurar"
+                    />
+            </LinearLayout>
 
-        <!--<TextView
-            android:layout_width="wrap_content"
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Real name:"/>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Real name:"/>-->
+            android:orientation="vertical"
+            android:visibility="invisible"
+            android:layout_marginHorizontal="30dp"
+            android:id="@+id/layout_change_profile">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nuevo nombre de usuario:"/>
+
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/username_config"
+                android:ems="10"
+                android:inputType="text"
+                android:textSize="20sp"
+                android:hint="UserName" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Contraseña:"/>
+
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/password_last"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                android:hint="Password" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nueva contraseña:"/>
+
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/new_password_config"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                android:hint="New Password" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Repite contraseña:"/>
+
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/repit_password_config"
+                android:ems="10"
+                android:inputType="textPassword"
+                android:textSize="20sp"
+                android:hint="Repit Password" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_change_cancel"
+                    android:layout_margin="10dp"
+                    android:text="Cancelar"
+                    />
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/button_change_acept"
+                    android:layout_margin="10dp"
+                    android:text="Aceptar"
+                    />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
     </LinearLayout>
-</LinearLayout>
+</androidx.core.widget.NestedScrollView>

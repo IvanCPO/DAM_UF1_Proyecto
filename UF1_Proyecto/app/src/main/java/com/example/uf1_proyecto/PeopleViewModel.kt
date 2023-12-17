@@ -57,6 +57,15 @@ class PeopleViewModel : ViewModel() {
             users.add(p)
             userUse = p
         }
+
+        fun configUser(username:String,password: String){
+            for (i in 0 until users.size)
+                if (users[i]== userUse){
+                    users[i] = Person(username,password)
+                    userUse = users[i]
+                }
+
+        }
         fun exit(){
             userUse = null
             saveListPeopleJson()
