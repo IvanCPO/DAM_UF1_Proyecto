@@ -4,14 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/userFragment"
+        android:id="@+id/nav_user"
         android:title="Settings"
         android:icon="@android:drawable/ic_menu_manage"
         tools:layout="@layout/fragment_user" />
 
     <group>
         <item
-            android:id="@+id/testFragment"
+            android:id="@+id/nav_test"
             android:icon="@android:drawable/ic_dialog_info"
             android:title="Compatibility Test"
             tools:layout="@layout/fragment_test" />
@@ -19,7 +19,8 @@
         <item
             android:id="@+id/nav_meet"
             android:icon="@android:drawable/ic_menu_call"
-            android:title="Meet Test" />
+            android:title="Meet Test"
+            tools:layout="@layout/fragment_meet_me" />
     </group>
 
 

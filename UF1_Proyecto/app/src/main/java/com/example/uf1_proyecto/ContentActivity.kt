@@ -3,9 +3,11 @@ package com.example.uf1_proyecto
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.MenuItem
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
+import androidx.cardview.widget.CardView
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.NavController
 import androidx.navigation.findNavController
@@ -49,14 +51,19 @@ class ContentActivity : AppCompatActivity() {
             layout.closeDrawers()
 
             when (menuItem.itemId) {
-                R.id.userFragment -> {
+                R.id.nav_user -> {
                     // Navegar al Fragment1
                     navController.navigate(R.id.userFragment)
                     true
                 }
-                R.id.testFragment -> {
+                R.id.nav_test -> {
                     // Navegar al Fragment2
                     navController.navigate(R.id.testFragment)
+                    true
+                }
+                R.id.nav_meet -> {
+                    // Navegar al Fragment3
+                    navController.navigate(R.id.meetMeFragment)
                     true
                 }
                 else -> false
@@ -70,6 +77,7 @@ class ContentActivity : AppCompatActivity() {
         var navigate = findViewById<NavigationView>(R.id.navigation_view)
         val header = navigate.getHeaderView(0)
         header.findViewById<TextView>(R.id.actual_user).setText(PeopleViewModel.userUse!!.userName)
+        header.findViewById<ImageView>(R.id.profile_picture).setImageResource(PeopleViewModel.userUse!!.picture)
     }
 
 

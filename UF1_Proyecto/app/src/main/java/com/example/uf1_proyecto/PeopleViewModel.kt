@@ -38,7 +38,7 @@ class PeopleViewModel : ViewModel() {
                 users.add(Person("ivan","a"))
                 users.add(Person("angel","a"))
                 users.add(Person("pouso","a"))
-                users.add(Person("mateiño","a"))
+                users.add(Person("mateiño","a",R.drawable.the_rock))
                 saveListPeopleJson()
                 return emptyList()
             }

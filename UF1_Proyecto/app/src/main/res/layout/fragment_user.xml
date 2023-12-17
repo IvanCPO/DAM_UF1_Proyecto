@@ -8,11 +8,13 @@
     android:orientation="horizontal"
     >
 
-    <include layout="@layout/picture_person"
+    <include
         android:id="@+id/picture_user"
-        android:layout_margin="30dp"
+        layout="@layout/picture_person"
         android:layout_width="175dp"
-        android:layout_height="175dp" />
+        android:layout_height="175dp"
+        android:layout_margin="30dp" />
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
