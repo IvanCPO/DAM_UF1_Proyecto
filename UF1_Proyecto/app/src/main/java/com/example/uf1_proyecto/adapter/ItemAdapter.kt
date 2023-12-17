@@ -74,6 +74,7 @@ class ItemAdapter( private val questions: List<Question> )
                 radioButton.text = opcion
                 radioGroupOpciones.addView(radioButton)
             }
+
         }
     }
 
@@ -86,5 +87,7 @@ class ItemAdapter( private val questions: List<Question> )
             line.max = pregunta.numLevels
         }
     }
+
+
 
 }

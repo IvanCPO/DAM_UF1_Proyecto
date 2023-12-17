@@ -1,17 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:android="http://schemas.android.com/apk/res/android">
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
     <item
-        android:id="@+id/nav_settings"
+        android:id="@+id/userFragment"
         android:title="Settings"
-        android:icon="@android:drawable/ic_menu_manage"/>
+        android:icon="@android:drawable/ic_menu_manage"
+        tools:layout="@layout/fragment_user" />
 
     <group>
         <item
-            android:id="@+id/nav_compatibility"
+            android:id="@+id/testFragment"
             android:icon="@android:drawable/ic_dialog_info"
-            android:title="Compatibility Test" />
+            android:title="Compatibility Test"
+            tools:layout="@layout/fragment_test" />
 
         <item
             android:id="@+id/nav_meet"
