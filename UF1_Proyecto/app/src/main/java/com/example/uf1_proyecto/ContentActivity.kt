@@ -45,24 +45,20 @@ class ContentActivity : AppCompatActivity() {
 
         setupActionBarWithNavController(navController, appBarConfiguration)
 
-        // Configurar el NavigationView para manejar clics en elementos del menú
         navView.setNavigationItemSelectedListener { menuItem ->
             menuItem.isChecked = true
             layout.closeDrawers()
 
             when (menuItem.itemId) {
                 R.id.nav_user -> {
-                    // Navegar al Fragment1
                     navController.navigate(R.id.userFragment)
                     true
                 }
                 R.id.nav_test -> {
-                    // Navegar al Fragment2
                     navController.navigate(R.id.testFragment)
                     true
                 }
                 R.id.nav_meet -> {
-                    // Navegar al Fragment3
                     navController.navigate(R.id.meetMeFragment)
                     true
                 }
@@ -87,18 +83,16 @@ class ContentActivity : AppCompatActivity() {
 
     private fun mostrarVentanaDeAlerta() {
         val builder = AlertDialog.Builder(this)
-        builder.setMessage("¿Estás seguro/a de que quieres salir de la sesion?")
-            .setPositiveButton("Sí") { dialog, id ->
+        builder.setMessage(getString(R.string.want_exit))
+            .setPositiveButton(getString(R.string.yes_option)) { dialog, id ->
                 PeopleViewModel.saveListPeopleJson()
                 PeopleViewModel.userUse=null
                 finish()
             }
-            .setNegativeButton("No") { dialog, id ->
-                // Si el usuario hace clic en "No", cierra la ventana de alerta
+            .setNegativeButton(getString(R.string.no_option)) { dialog, id ->
                 dialog.dismiss()
             }
 
-        // Crea y muestra la ventana de alerta
         builder.create().show()
     }
 

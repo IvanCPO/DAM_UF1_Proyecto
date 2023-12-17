@@ -27,11 +27,9 @@ class TestFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-//        return inflater.inflate(R.layout.fragment_introduce, container, false)
         _binding = FragmentTestBinding.inflate(inflater,container,false)
         val view = binding.root
-        myDataset = Datasource().loadQuestionsCompatibility().shuffled().take(20)
+        myDataset = Datasource(requireContext()).loadQuestionsCompatibility().shuffled().take(20)
         val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
@@ -80,7 +78,7 @@ class TestFragment : Fragment() {
                 cardView.setCardBackgroundColor(Color.WHITE)
         }
         if (!todasMarcadas)
-            Toast.makeText(requireContext(), "Te faltan por resolver", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.make_all_please), Toast.LENGTH_SHORT).show()
         return todasMarcadas
     }
 

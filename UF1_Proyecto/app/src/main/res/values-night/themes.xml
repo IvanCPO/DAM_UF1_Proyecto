@@ -5,4 +5,5 @@
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
 
     </style>
+    <style name="Theme.UF1_Proyecto" parent="Base.Theme.UF1_Proyecto" />
 </resources>

@@ -8,6 +8,7 @@ import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import com.example.uf1_proyecto.PeopleViewModel
+import com.example.uf1_proyecto.R
 import com.example.uf1_proyecto.databinding.FragmentUserBinding
 
 class UserFragment : Fragment() {
@@ -39,9 +40,11 @@ class UserFragment : Fragment() {
                     takeConfigNew()
                     activity?.recreate()
                 }else
-                    Toast.makeText(requireContext(), "La nueva contraseña no se ha escrito bien. Vuelve a intentarlo", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(requireContext(),
+                        getString(R.string.bad_new_massword), Toast.LENGTH_SHORT).show()
             }else
-                Toast.makeText(requireContext(), "La antigua contraseña no es correcta, pruebalo de nuevo", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(),
+                    getString(R.string.bad_password_option), Toast.LENGTH_SHORT).show()
         }
 
 

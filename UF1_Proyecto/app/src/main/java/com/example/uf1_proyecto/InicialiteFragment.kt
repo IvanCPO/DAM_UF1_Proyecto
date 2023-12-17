@@ -20,7 +20,6 @@ class InicialiteFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
         _binding = FragmentInicialiteBinding.inflate(inflater,container,false)
         val view = binding.root
 
@@ -34,7 +33,7 @@ class InicialiteFragment : Fragment() {
             }else{
                 Toast.makeText(
                     activity,
-                    "El usuario o la contraseña son incorrectos. Puede que no se haya registrado. Primero empiece con eso",
+                    getString(R.string.bad_login_toast),
                     Toast.LENGTH_LONG
                 ).show()
                 binding.inicialiteUsername.setText("")

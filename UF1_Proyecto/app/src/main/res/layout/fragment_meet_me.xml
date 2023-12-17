@@ -18,8 +18,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:paddingHorizontal="20dp"
-            android:paddingVertical="40dp"
-            android:text="Bienvenido al Conoce a Ivan! Este test pone a prueba todo el conomiento que tengas sobre Iván Cabaleiro Poceiro. Se generaran preguntas sobre la vida de Ivan y tu deves de darle a la opcion correcta. Si aciertas es un punto a favor, y si no, pues fallas estrepidosamente. Mucho animo"
+            android:paddingVertical="30dp"
+            android:text="@string/presentation_test_meet"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -36,7 +36,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
-            android:text="Submit"
+            android:text="@string/send_button"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/recycler_view" />

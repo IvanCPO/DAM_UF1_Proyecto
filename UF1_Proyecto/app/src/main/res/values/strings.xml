@@ -1,7 +1,264 @@
 <resources>
     <string name="app_name">Ubuntu Player N1</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+
     <string name="navigation_drawer_open">Abrir menú</string>
+
     <string name="navigation_drawer_close">Cerrar menú</string>
+
+    <!-- Todos los elementos de fuera del test-->
+
+    <string name="menu_config">Configuraciones</string>
+    <string name="menu_compatibility">Test de Compatibilidad</string>
+    <string name="menu_meet">Conóceme</string>
+    <string name="user_name_option">Nombre usuario</string>
+    <string name="password_option">Contraseña</string>
+    <string name="regist_button">Registrarse</string>
+    <string name="initial_button">Iniciar</string>
+    <string name="presentation_test_meet">Bienvenido al Conoce a Ivan! Este test pone a prueba todo el conomiento que tengas sobre Iván Cabaleiro Poceiro. Se generaran preguntas sobre la vida de Ivan y tu deves de darle a la opcion correcta. Si aciertas es un punto a favor, y si no, pues fallas estrepidosamente. Mucho animo</string>
+    <string name="send_button">Enviar</string>
+    <string name="repit_password_option">Repite la contraseña</string>
+    <string name="config_button">Configurar</string>
+    <string name="new_username_option">Nuevo nombre de usuario</string>
+    <string name="new_password_option">Nueva contraseña</string>
+    <string name="cancel_button">Cancelar</string>
+    <string name="accept_button">Aceptar</string>
+    <string name="introduction_compatibility">¡Bienvenido al Test de Compatibilidad con Iván! Este test fue generado para saber el nivel de compatibilidad entre Iván, y el usuario. Estas preguntas fueron ya comprobadas por Iván y ya dio su respuesta. El objetivo es llegar a responder lo mismo que Iván y el resultado será un porcentaje de compatibilidad con el usuario. Esto no tiene que ser en el sentido romantico, lo puede realizar todo el mundo. Ahora si ¡a empezar|</string>
+    <string name="want_exit">¿Estás seguro/a de que quieres salir de la sesion?</string>
+    <string name="yes_option">Sí</string>
+    <string name="no_option">No</string>
+    <string name="bad_login_toast">El usuario o la contraseña son incorrectos. Puede que no se haya registrado. Primero empiece con eso</string>
+    <string name="bad_password_toast">La contraseña no es correcta. No son iguales</string>
+    <string name="make_all_please">Te faltan por resolver</string>
+    <string name="bad_password_option">La antigua contraseña no es correcta, pruebalo de nuevo</string>
+    <string name="bad_new_massword">La nueva contraseña no se ha escrito bien. Vuelve a intentarlo</string>
+
+
+    <!-- Todos los elementos del test-->
+
+    <string name="pregunta_serie_tv">¿Cuál es tu saga de televisión favorita?</string>
+
+    <string name="pregunta_kotlin">En una escala del 1 al 10, ¿qué tan cómodo te sientes programando en Kotlin?</string>
+
+    <string name="pregunta_musica_romantica">¿Qué tipo de música te gusta para una cita romántica?</string>
+
+    <string name="pregunta_extroversion">En una escala del 1 al 5, ¿qué tan extrovertido/a te consideras en tu grupo de amigos?</string>
+
+    <string name="pregunta_postre">¿Cuál es tu postre favorito?</string>
+
+    <string name="pregunta_videojuego">¿Cuál es tu videojuego preferido?</string>
+
+    <string name="pregunta_mensajes">¿Prefieres mensajes de texto o llamadas?</string>
+
+    <string name="pregunta_organizacion">En una escala del 1 al 5, ¿qué tan organizado/a eres con tus estudios?</string>
+
+    <string name="pregunta_pelicula_romantica">¿Cuál es tu película romántica favorita?</string>
+
+    <string name="pregunta_anime">¿Cuál es tu anime favorito?</string>
+
+    <string name="pregunta_redes_sociales">En una escala del 1 al 10, ¿qué tan aficionado/a eres a las redes sociales?</string>
+
+    <string name="pregunta_color">¿Cuál es tu color favorito?</string>
+
+    <string name="pregunta_amistad">En una escala del 1 al 5, ¿qué tan importante es la amistad para ti?</string>
+
+    <string name="pregunta_pelicula_cine">¿Prefieres ver películas en el cine o en casa?</string>
+
+    <string name="pregunta_moda">En una escala del 1 al 10, ¿qué tan interesado/a estás en la moda?</string>
+
+    <string name="pregunta_comida_rapida">¿Cuál es tu comida rápida favorita?</string>
+
+    <string name="pregunta_actividad_aire_libre">¿Cuál es tu actividad al aire libre favorita?</string>
+
+    <string name="pregunta_creatividad">En una escala del 1 al 5, ¿qué tan creativo/a te consideras?</string>
+
+    <string name="pregunta_estacion_anio">¿Qué estación del año es tu favorita?</string>
+
+    <string name="pregunta_red_social">¿Cuál es tu red social favorita?</string>
+
+    <string name="pregunta_fan_rock">En una escala del 1 al 10, ¿cuán fan eres de Dwayne Douglas Johnson, \"The Rock\"?</string>
+
+    <string name="pregunta_genero_favorito">¿Cuál es tu género favorito en general (peliculas/series/Libros)?</string>
+
+    <string name="pregunta_pueblo_ciudad">¿Prefieres el pueblo (muy natural) o la ciudad?</string>
+
+    <string name="pregunta_vacaciones_verano">¿Cuál es tu lugar ideal para pasar las vacaciones de verano?</string>
+
+    <string name="pregunta_aventura_cocina">En una escala del 1 al 10, ¿qué tan aventurero/a eres en la cocina?</string>
+
+    <string name="pregunta_mascotas">¿Eres más de gatos o perros?</string>
+
+    <!-- Preguntas Adicionales -->
+    <string name="pregunta_casi_muerte">¿Qué hizo que casi murieras muy joven?</string>
+
+    <string name="pregunta_saludo">¿Cómo saludas a todo el mundo?</string>
+
+    <string name="pregunta_hermanos">¿Cuántos hermanos/as tienes? (0-5)</string>
+    <string-array name="opciones_serie_tv">
+        <item>Star Wars</item>
+        <item>Torrente</item>
+        <item>Fast &amp; Furious</item>
+        <item>Dragon Ball</item>
+    </string-array>
+
+    <string-array name="opciones_musica_romantica">
+        <item>Baladas</item>
+        <item>Pop romántico</item>
+        <item>R&amp;B suave</item>
+        <item>Indie acústico</item>
+    </string-array>
+
+    <string-array name="opciones_postre">
+        <item>Pastel de chocolate</item>
+        <item>Helado</item>
+        <item>Frutas frescas</item>
+        <item>Tiramisú</item>
+    </string-array>
+
+    <string-array name="opciones_videojuego">
+        <item>Pokemon</item>
+        <item>Minecraft</item>
+        <item>GTA</item>
+        <item>The Legend Of Zelda</item>
+    </string-array>
+
+    <string-array name="opciones_mensajes">
+        <item>Mensajes de texto</item>
+        <item>Llamadas</item>
+    </string-array>
+
+    <string-array name="opciones_pelicula_romantica">
+        <item>Titanic</item>
+        <item>Nothing Hill</item>
+        <item>Aladin</item>
+        <item>La La Land</item>
+    </string-array>
+
+    <string-array name="opciones_anime">
+        <item>Dragon Ball</item>
+        <item>Doraemon</item>
+        <item>ShinChan</item>
+        <item>Death Note</item>
+    </string-array>
+
+    <string-array name="opciones_color">
+        <item>Azul</item>
+        <item>Rojo</item>
+        <item>Verde</item>
+        <item>Rosa</item>
+    </string-array>
+
+    <string-array name="opciones_pelicula_cine">
+        <item>Cine</item>
+        <item>En casa</item>
+    </string-array>
+
+    <string-array name="opciones_comida_rapida">
+        <item>Pizza</item>
+        <item>Hamburguesas</item>
+        <item>Tacos</item>
+        <item>Sushi</item>
+    </string-array>
+
+    <string-array name="opciones_actividad_aire_libre">
+        <item>Senderismo</item>
+        <item>Picnic en el parque</item>
+        <item>Bicicleta</item>
+        <item>Jugar al fútbol</item>
+    </string-array>
+
+    <string-array name="opciones_estacion_anio">
+        <item>Invierno</item>
+        <item>Primavera</item>
+        <item>Verano</item>
+        <item>Otoño</item>
+    </string-array>
+
+    <string-array name="opciones_red_social">
+        <item>Instagram</item>
+        <item>BeReal</item>
+        <item>TikTok</item>
+        <item>Twitter</item>
+    </string-array>
+
+    <string-array name="opciones_genero_favorito">
+        <item>Acción</item>
+        <item>Fantasía</item>
+        <item>Aventuras</item>
+        <item>Misterio</item>
+    </string-array>
+
+    <string-array name="opciones_pueblo_ciudad">
+        <item>Pueblo</item>
+        <item>Ciudad</item>
+    </string-array>
+
+    <string-array name="opciones_vacaciones_verano">
+        <item>Playa tropical</item>
+        <item>Montañas</item>
+        <item>Ciudad animada</item>
+        <item>Rios de Montaña</item>
+    </string-array>
+
+    <string-array name="opciones_mascotas">
+        <item>Gatos</item>
+        <item>Perros</item>
+    </string-array>
+
+    <!-- Opciones Preguntas Adicionales -->
+    <string-array name="opciones_casi_muerte">
+        <item>Atragantándose comiendo unos Chasquis</item>
+        <item>Tirarse de un lugar muy alto de cabeza</item>
+        <item>Tanto la primera como la segunda son correctas</item>
+        <item>Que tonterías, nunca le pasó nada</item>
+    </string-array>
+
+    <string-array name="opciones_saludo">
+        <item>No saluda, eso lo considera de débiles</item>
+        <item>Dice buenos días o buenas tardes, dependiendo del momento del día</item>
+        <item>Grita ¡Bueeeeeeeeeeeenas! De una forma que se considera muy exagerada</item>
+        <item>Dice chao (se cree italiano)</item>
+    </string-array>
+    <string name="pregunta_fecha_nacimiento">¿Cuándo nació?</string>
+    <string-array name="opciones_fecha_nacimiento">
+        <item>10, de Agosto de 2002</item>
+        <item>30, de Septiembre de 2003</item>
+        <item>28, de Enero de 2004</item>
+        <item>6, de Noviembre de 2000</item>
+        <item>9, de Octubre de 2005</item>
+    </string-array>
+
+    <string name="pregunta_mascota_no_pertenecio">¿Cuál de estos nombres no perteneció a una de sus mascotas?</string>
+    <string-array name="opciones_mascota_no_pertenecio">
+        <item>Bruno</item>
+        <item>Nora</item>
+        <item>Blue</item>
+        <item>Viriti</item>
+    </string-array>
+
+    <string name="pregunta_serie_infancia">¿Cuál fue su serie de infancia?</string>
+    <string-array name="opciones_serie_infancia">
+        <item>Dragon Ball, como la de muchos otros</item>
+        <item>Naruto, obviamente</item>
+        <item>Power Rangers (pensaba que era el rojo)</item>
+        <item>Mazinger Z</item>
+    </string-array>
+
+    <string name="pregunta_lugar_origen">¿De dónde es?</string>
+    <string-array name="opciones_lugar_origen">
+        <item>Santiago de Compostela</item>
+        <item>Pontevedra</item>
+        <item>Rianxo</item>
+        <item>O Grove</item>
+    </string-array>
+
+    <string name="pregunta_color_favorito_2">¿Cuál es su color favorito?</string>
+    <string-array name="opciones_color_favorito_2">
+        <item>Azul</item>
+        <item>Amarillo</item>
+        <item>Verde</item>
+        <item>Rojo</item>
+        <item>Naranja</item>
+        <item>Negro</item>
+    </string-array>
+
 </resources>

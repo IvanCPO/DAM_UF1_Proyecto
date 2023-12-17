@@ -5,7 +5,7 @@
 
     <item
         android:id="@+id/nav_user"
-        android:title="Settings"
+        android:title="@string/menu_config"
         android:icon="@android:drawable/ic_menu_manage"
         tools:layout="@layout/fragment_user" />
 
@@ -13,13 +13,13 @@
         <item
             android:id="@+id/nav_test"
             android:icon="@android:drawable/ic_dialog_info"
-            android:title="Compatibility Test"
+            android:title="@string/menu_compatibility"
             tools:layout="@layout/fragment_test" />
 
         <item
             android:id="@+id/nav_meet"
             android:icon="@android:drawable/ic_menu_call"
-            android:title="Meet Test"
+            android:title="@string/menu_meet"
             tools:layout="@layout/fragment_meet_me" />
     </group>
 

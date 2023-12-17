@@ -92,11 +92,8 @@ class ItemAdapter( private val questions: List<Question> )
 
         fun bind(pregunta: ButtonQuest) {
             textViewPregunta.text = pregunta.title
-
-            // Limpiar opciones existentes para evitar duplicados al reciclar la vista
             radioGroupOpciones.removeAllViews()
 
-            // Crear botones dinámicamente
             for (opcion in pregunta.options) {
                 val radioButton = RadioButton(itemView.context)
                 radioButton.text = opcion

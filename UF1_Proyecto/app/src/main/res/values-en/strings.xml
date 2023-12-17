@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Ubuntu Player N1</string>
+
+    <string name="navigation_drawer_open">Open menu</string>
+
+    <string name="navigation_drawer_close">Close menu</string>
+
+    <!-- All non-test elements -->
+
+    <string name="menu_config">Settings</string>
+    <string name="menu_compatibility">Compatibility Test</string>
+    <string name="menu_meet">Meet Me</string>
+    <string name="user_name_option">Username</string>
+    <string name="password_option">Password</string>
+    <string name="regist_button">Register</string>
+    <string name="initial_button">Start</string>
+    <string name="presentation_test_meet">Welcome to Meet Ivan! This test evaluates your knowledge about Iván Cabaleiro Poceiro. Questions about the life of Ivan will be generated, and you have to choose the correct option. If you answer correctly, it is a point in your favor; if not, it is a resounding failure. Good luck!</string>
+    <string name="send_button">Send</string>
+    <string name="repit_password_option">Repeat password</string>
+    <string name="config_button">Configure</string>
+    <string name="new_username_option">New username</string>
+    <string name="new_password_option">New password</string>
+    <string name="cancel_button">Cancel</string>
+    <string name="accept_button">Accept</string>
+    <string name="introduction_compatibility">Welcome to the Compatibility Test with Iván! This test was generated to determine the compatibility level between Iván and the user. These questions have already been verified by Iván, and he has provided his answers. The goal is to answer the same as Iván, and the result will be a percentage of compatibility with the user. This does not have to be in a romantic sense; anyone can take the test. Now, lets get started!</string>
+    <string name="want_exit">Are you sure you want to log out?</string>
+    <string name="yes_option">Yes</string>
+    <string name="no_option">No</string>
+    <string name="bad_login_toast">Incorrect username or password. It is possible you have not registered. Start with that first.</string>
+    <string name="bad_password_toast">Incorrect password. They are not the same.</string>
+    <string name="make_all_please">You still have questions to answer.</string>
+    <string name="bad_password_option">The old password is incorrect; try again.</string>
+    <string name="bad_new_massword">The new password is not entered correctly. Please try again.</string>
+
+    <!-- All test elements -->
+
+    <string name="pregunta_serie_tv">What is your favorite TV series?</string>
+
+    <string name="pregunta_kotlin">On a scale of 1 to 10, how comfortable do you feel programming in Kotlin?</string>
+
+    <string name="pregunta_musica_romantica">What type of music do you like for a romantic date?</string>
+
+    <string name="pregunta_extroversion">On a scale of 1 to 5, how extroverted do you consider yourself in your group of friends?</string>
+
+    <string name="pregunta_postre">What is your favorite dessert?</string>
+
+    <string name="pregunta_videojuego">What is your favorite video game?</string>
+
+    <string name="pregunta_mensajes">Do you prefer text messages or calls?</string>
+
+    <string name="pregunta_organizacion">On a scale of 1 to 5, how organized are you with your studies?</string>
+
+    <string name="pregunta_pelicula_romantica">What is your favorite romantic movie?</string>
+
+    <string name="pregunta_anime">What is your favorite anime?</string>
+
+    <string name="pregunta_redes_sociales">On a scale of 1 to 10, how addicted are you to social media?</string>
+
+    <string name="pregunta_color">What is your favorite color?</string>
+
+    <string name="pregunta_amistad">On a scale of 1 to 5, how important is friendship to you?</string>
+
+    <string name="pregunta_pelicula_cine">Do you prefer to watch movies in the cinema or at home?</string>
+
+    <string name="pregunta_moda">On a scale of 1 to 10, how interested are you in fashion?</string>
+
+    <string name="pregunta_comida_rapida">What is your favorite fast food?</string>
+
+    <string name="pregunta_actividad_aire_libre">What is your favorite outdoor activity?</string>
+
+    <string name="pregunta_creatividad">On a scale of 1 to 5, how creative do you consider yourself?</string>
+
+    <string name="pregunta_estacion_anio">What is your favorite season of the year?</string>
+
+    <string name="pregunta_red_social">What is your favorite social media platform?</string>
+
+    <string name="pregunta_fan_rock">On a scale of 1 to 10, how much of a fan are you of Dwayne Douglas Johnson, "The Rock"?</string>
+
+    <string name="pregunta_genero_favorito">What is your favorite genre overall (movies/series/books)?</string>
+
+    <string name="pregunta_pueblo_ciudad">Do you prefer the countryside (very natural) or the city?</string>
+
+    <string name="pregunta_vacaciones_verano">What is your ideal place to spend summer vacation?</string>
+
+    <string name="pregunta_aventura_cocina">On a scale of 1 to 10, how adventurous are you in the kitchen?</string>
+
+    <string name="pregunta_mascotas">Are you more of a cat person or a dog person?</string>
+
+    <!-- Additional Questions -->
+
+    <string name="pregunta_casi_muerte">What almost caused you to die at a young age?</string>
+
+    <string name="pregunta_saludo">How do you greet everyone?</string>
+
+    <string name="pregunta_hermanos">How many brothers/sisters do you have? (0-5)</string>
+
+    <string-array name="opciones_serie_tv">
+        <item>Star Wars</item>
+        <item>Torrente</item>
+        <item>Fast &amp; Furious</item>
+        <item>Dragon Ball</item>
+    </string-array>
+
+    <string-array name="opciones_musica_romantica">
+        <item>Ballads</item>
+        <item>Romantic pop</item>
+        <item>Soft R&amp;B</item>
+        <item>Indie acoustic</item>
+    </string-array>
+
+    <string-array name="opciones_postre">
+        <item>Chocolate cake</item>
+        <item>Ice cream</item>
+        <item>Fresh fruits</item>
+        <item>Tiramisu</item>
+    </string-array>
+
+    <string-array name="opciones_videojuego">
+        <item>Pokemon</item>
+        <item>Minecraft</item>
+        <item>GTA</item>
+        <item>The Legend Of Zelda</item>
+    </string-array>
+
+    <string-array name="opciones_mensajes">
+        <item>Text messages</item>
+        <item>Calls</item>
+    </string-array>
+
+    <string-array name="opciones_pelicula_romantica">
+        <item>Titanic</item>
+        <item>Nothing Hill</item>
+        <item>Aladdin</item>
+        <item>La La Land</item>
+    </string-array>
+
+    <string-array name="opciones_anime">
+        <item>Dragon Ball</item>
+        <item>Doraemon</item>
+        <item>ShinChan</item>
+        <item>Death Note</item>
+    </string-array>
+
+    <string-array name="opciones_color">
+        <item>Blue</item>
+        <item>Red</item>
+        <item>Green</item>
+        <item>Pink</item>
+    </string-array>
+
+    <string-array name="opciones_pelicula_cine">
+        <item>Cinema</item>
+        <item>At home</item>
+    </string-array>
+
+    <string-array name="opciones_comida_rapida">
+        <item>Pizza</item>
+        <item>Hamburgers</item>
+        <item>Tacos</item>
+        <item>Sushi</item>
+    </string-array>
+
+    <string-array name="opciones_actividad_aire_libre">
+        <item>Hiking</item>
+        <item>Picnic in the park</item>
+        <item>Biking</item>
+        <item>Playing soccer</item>
+    </string-array>
+
+    <string-array name="opciones_estacion_anio">
+        <item>Winter</item>
+        <item>Spring</item>
+        <item>Summer</item>
+        <item>Autumn</item>
+    </string-array>
+
+    <string-array name="opciones_red_social">
+        <item>Instagram</item>
+        <item>BeReal</item>
+        <item>TikTok</item>
+        <item>Twitter</item>
+    </string-array>
+
+    <string-array name="opciones_genero_favorito">
+        <item>Action</item>
+        <item>Fantasy</item>
+        <item>Adventure</item>
+        <item>Mystery</item>
+    </string-array>
+
+    <string-array name="opciones_pueblo_ciudad">
+        <item>Countryside</item>
+        <item>City</item>
+    </string-array>
+
+    <string-array name="opciones_vacaciones_verano">
+        <item>Tropical beach</item>
+        <item>Mountains</item>
+        <item>Lively city</item>
+        <item>Mountain rivers</item>
+    </string-array>
+
+    <string-array name="opciones_mascotas">
+        <item>Cats</item>
+        <item>Dogs</item>
+    </string-array>
+
+    <!-- Additional Questions Options -->
+
+    <string-array name="opciones_casi_muerte">
+        <item>Choking on Chasquis while eating</item>
+        <item>Jumping from a high place headfirst</item>
+        <item>Both the first and second are correct</item>
+        <item>What nonsense, nothing ever happened to him</item>
+    </string-array>
+
+    <string-array name="opciones_saludo">
+        <item>Does not greet, considers it weak</item>
+        <item>Says good morning or good afternoon, depending on the time of day</item>
+        <item>Screams "Good morning!" in an exaggerated way</item>
+        <item>Says goodbye (thinks he is Italian)</item>
+    </string-array>
+
+    <string name="pregunta_fecha_nacimiento">When were you born?</string>
+    <string-array name="opciones_fecha_nacimiento">
+        <item>August 10, 2002</item>
+        <item>September 30, 2003</item>
+        <item>January 28, 2004</item>
+        <item>November 6, 2000</item>
+        <item>October 9, 2005</item>
+    </string-array>
+
+    <string name="pregunta_mascota_no_pertenecio">Which of these names did not belong to one of your pets?</string>
+    <string-array name="opciones_mascota_no_pertenecio">
+        <item>Bruno</item>
+        <item>Nora</item>
+        <item>Blue</item>
+        <item>Viriti</item>
+    </string-array>
+    <string name="pregunta_serie_infancia">What was your favorite childhood TV series?</string>
+    <string-array name="opciones_serie_infancia">
+        <item>Dragon Ball, like many others</item>
+        <item>Naruto, obviously</item>
+        <item>Power Rangers (thought it was the red one)</item>
+        <item>Mazinger Z</item>
+    </string-array>
+
+    <string name="pregunta_lugar_origen">Where are you from?</string>
+    <string-array name="opciones_lugar_origen">
+        <item>Santiago de Compostela</item>
+        <item>Pontevedra</item>
+        <item>Rianxo</item>
+        <item>O Grove</item>
+    </string-array>
+
+    <string name="pregunta_color_favorito_2">What is your favorite color?</string>
+    <string-array name="opciones_color_favorito_2">
+        <item>Blue</item>
+        <item>Yellow</item>
+        <item>Green</item>
+        <item>Red</item>
+        <item>Orange</item>
+        <item>Black</item>
+    </string-array>
+</resources>

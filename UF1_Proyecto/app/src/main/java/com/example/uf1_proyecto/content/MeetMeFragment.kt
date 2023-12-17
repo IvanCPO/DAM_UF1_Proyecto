@@ -31,7 +31,7 @@ class MeetMeFragment : Fragment() {
     ): View? {
         _binding = FragmentMeetMeBinding.inflate(inflater,container,false)
         val view = binding.root
-        myDataset = Datasource().loadQuestionsIvan().shuffled().take(2)
+        myDataset = Datasource(requireContext()).loadQuestionsIvan().shuffled().take(6)
         val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
 
@@ -80,7 +80,7 @@ class MeetMeFragment : Fragment() {
                 cardView.setCardBackgroundColor(Color.WHITE)
         }
         if (!todasMarcadas)
-            Toast.makeText(requireContext(), "Te faltan por resolver", Toast.LENGTH_SHORT).show()
+            Toast.makeText(requireContext(), getString(R.string.make_all_please), Toast.LENGTH_SHORT).show()
         return todasMarcadas
     }
 

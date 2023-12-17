@@ -16,7 +16,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
-        android:hint="UserName" />
+        android:hint="@string/user_name_option" />
 
     <EditText
         android:id="@+id/password"
@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint="Password" />
+        android:hint="@string/password_option" />
 
     <EditText
         android:id="@+id/repit_password"
@@ -32,11 +32,11 @@
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="textPassword"
-        android:hint="Repit password" />
+        android:hint="@string/repit_password_option" />
     <Button
         android:id="@+id/button_start"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Start"
+        android:text="@string/initial_button"
         />
 </LinearLayout>
