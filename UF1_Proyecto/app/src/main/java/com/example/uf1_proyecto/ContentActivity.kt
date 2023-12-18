@@ -8,6 +8,7 @@ import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.lifecycle.ViewModelProvider
+import com.example.uf1_proyecto.data.Datasource
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
@@ -72,8 +73,8 @@ class ContentActivity : AppCompatActivity() {
         super.onResume()
         var navigate = findViewById<NavigationView>(R.id.navigation_view)
         val header = navigate.getHeaderView(0)
-        header.findViewById<TextView>(R.id.actual_user).setText(peopleViewModel.userUse!!.userName)
-        header.findViewById<ImageView>(R.id.profile_picture).setImageResource(peopleViewModel.userUse!!.picture)
+        header.findViewById<TextView>(R.id.actual_user).setText(Datasource.userUse!!.userName)
+        header.findViewById<ImageView>(R.id.profile_picture).setImageResource(Datasource.userUse!!.picture)
     }
 
 
