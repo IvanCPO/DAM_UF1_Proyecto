@@ -41,6 +41,10 @@ class UserFragment : Fragment() {
             if (binding.passwordLast.text.toString().equals(peopleViewModel.userUse!!.password)){
                 if (binding.newPasswordConfig.text.toString().equals(binding.repitPasswordConfig.text.toString())){
                     takeConfigNew()
+                    binding.usernameConfig.setText("")
+                    binding.passwordLast.setText("")
+                    binding.newPasswordConfig.setText("")
+                    binding.repitPasswordConfig.setText("")
                     activity?.recreate()
                 }else
                     Toast.makeText(requireContext(),
