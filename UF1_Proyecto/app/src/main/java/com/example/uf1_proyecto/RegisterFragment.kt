@@ -34,14 +34,17 @@ class RegisterFragment : Fragment() {
                     getString(R.string.bad_password_toast),
                     Toast.LENGTH_LONG
                 ).show()
-                binding.password.setText("")
-                binding.repitPassword.setText("")
                 
             }else{
                 peopleViewModel.addUser(userName,userPass)
+                peopleViewModel.takeUser(userName,userPass)
                 var intent = Intent(activity, ContentActivity::class.java)
+
                 startActivity( intent)
             }
+            binding.userNameRegister.setText("")
+            binding.password.setText("")
+            binding.repitPassword.setText("")
         }
         return view
     }
