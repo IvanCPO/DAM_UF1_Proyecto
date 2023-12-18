@@ -1,6 +1,7 @@
 package com.example.uf1_proyecto.data
 
 import android.content.Context
+import com.example.uf1_proyecto.PeopleViewModel
 import com.example.uf1_proyecto.R
 
 class Datasource (private val context: Context) {
@@ -47,6 +48,46 @@ class Datasource (private val context: Context) {
             ButtonQuest(resources.getString(R.string.pregunta_lugar_origen), resources.getStringArray(R.array.opciones_lugar_origen).toList(), 3),
             ButtonQuest(resources.getString(R.string.pregunta_color_favorito_2), resources.getStringArray(R.array.opciones_color_favorito_2).toList(), 3)
         )
+    }
+    companion object{
+        var listUsers: ArrayList<Person> = ArrayList<Person>()
+
+        public var userUse: Person ?= null
+        var perc:Int = 0
+        var meet:Boolean = false
+
+
+        fun takeUser(username: String, password: String): Person?{
+            for (user in listUsers){
+                if (user.userName.equals(username))
+                    if (user.password.equals(password))
+                        userUse = user
+            }
+
+            return userUse
+        }
+        fun loadUsers():ArrayList<Person>{
+            listUsers.add(Person("ivan","a"))
+            listUsers.add(Person("pouso","a",R.drawable.pouso_example))
+            listUsers.add(Person("maziws","a",R.drawable.the_rock))
+            return listUsers
+        }
+        fun addUser(person : Person){
+            listUsers.add(person)
+        }
+
+        fun saveList(users: ArrayList<Person>) {
+            listUsers=users
+
+        }
+
+        fun setPercent(p: Int, m: Boolean) {
+            perc = p
+            meet = m
+        }
+        fun getPercent():Int{
+            return perc
+        }
     }
 
 }

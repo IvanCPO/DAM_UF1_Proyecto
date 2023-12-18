@@ -7,12 +7,14 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.lifecycle.ViewModelProvider
 import com.example.uf1_proyecto.databinding.FragmentRegisterBinding
 
 class RegisterFragment : Fragment() {
 
     var _binding : FragmentRegisterBinding? = null
     val binding get() = _binding!!
+    private lateinit var peopleViewModel: PeopleViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -20,6 +22,8 @@ class RegisterFragment : Fragment() {
     ): View? {
         _binding = FragmentRegisterBinding.inflate(inflater,container,false)
         var view = binding.root
+        peopleViewModel = ViewModelProvider(this).get(PeopleViewModel::class.java)
+
         binding.buttonStart.setOnClickListener {
             var userName = binding.userNameRegister.text.toString()
             var userPass = binding.password.text.toString()
@@ -34,7 +38,7 @@ class RegisterFragment : Fragment() {
                 binding.repitPassword.setText("")
                 
             }else{
-                PeopleViewModel.addUser(userName,userPass)
+                peopleViewModel.addUser(userName,userPass)
                 var intent = Intent(activity, ContentActivity::class.java)
                 startActivity( intent)
             }

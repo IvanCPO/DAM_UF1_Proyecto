@@ -8,9 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uf1_proyecto.PeopleViewModel
 import com.example.uf1_proyecto.R
 import com.example.uf1_proyecto.adapter.ItemAdapter
 import com.example.uf1_proyecto.data.Datasource
@@ -22,6 +24,7 @@ class TestFragment : Fragment() {
     private var _binding : FragmentTestBinding? = null
     private val binding get() = _binding!!
     private var myDataset: List<Question>? = null
+    private lateinit var peopleViewModel: PeopleViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +32,8 @@ class TestFragment : Fragment() {
     ): View? {
         _binding = FragmentTestBinding.inflate(inflater,container,false)
         val view = binding.root
+        peopleViewModel = ViewModelProvider(this).get(PeopleViewModel::class.java)
+
         myDataset = Datasource(requireContext()).loadQuestionsCompatibility().shuffled().take(20)
         val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -51,7 +56,8 @@ class TestFragment : Fragment() {
                         puntaje++
                     }
                 }
-
+                peopleViewModel.setCompatibility()
+                peopleViewModel.setResult(questions.size,puntaje)
                 view.findNavController().navigate(R.id.action_testFragment_to_resultFragment)
             }
         }

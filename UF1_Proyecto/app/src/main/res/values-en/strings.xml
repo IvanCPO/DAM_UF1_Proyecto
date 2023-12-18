@@ -263,4 +263,12 @@
         <item>Orange</item>
         <item>Black</item>
     </string-array>
+
+    <string name="intro_resul">"Your result was "</string>
+    <string name="res_1">It seems like you do not know me as much as you thought. Maybe you will do better next time.</string>
+    <string name="res_2">Looks like we do not vibe that much... Well, it was a pleasure. Do not take it too hard.</string>
+    <string name="res_3">It seems you know me a bit. I guess sometimes luck is on your side.</string>
+    <string name="res_4">Looks like we have something in common.</string>
+    <string name="res_5">No asking my brother or my parents, okay!! Congratulations, you know family-level stuff.</string>
+    <string name="res_6">We are two peas in a pod, boss. Take care.</string>
 </resources>

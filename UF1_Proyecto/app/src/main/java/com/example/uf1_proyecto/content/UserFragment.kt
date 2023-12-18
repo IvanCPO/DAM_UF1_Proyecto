@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
+import androidx.lifecycle.ViewModelProvider
 import com.example.uf1_proyecto.PeopleViewModel
 import com.example.uf1_proyecto.R
 import com.example.uf1_proyecto.databinding.FragmentUserBinding
@@ -15,6 +16,7 @@ class UserFragment : Fragment() {
 
     var _binding : FragmentUserBinding? = null
     val binding get() = _binding!!
+    private lateinit var peopleViewModel: PeopleViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,9 +26,10 @@ class UserFragment : Fragment() {
 //        return inflater.inflate(R.layout.fragment_introduce, container, false)
         _binding = FragmentUserBinding.inflate(inflater,container,false)
         var view = binding.root
+        peopleViewModel = ViewModelProvider(this).get(PeopleViewModel::class.java)
 
-        binding.profileUsername.setText(PeopleViewModel.userUse!!.userName)
-        binding.pictureUser.profilePicture.setImageResource(PeopleViewModel.userUse!!.picture)
+        binding.profileUsername.setText(peopleViewModel.userUse!!.userName)
+        binding.pictureUser.profilePicture.setImageResource(peopleViewModel.userUse!!.picture)
 
         binding.buttonChange.setOnClickListener {
             binding.layoutChangeProfile.visibility = View.VISIBLE
@@ -35,7 +38,7 @@ class UserFragment : Fragment() {
             binding.layoutChangeProfile.visibility = View.INVISIBLE
         }
         binding.buttonChangeAcept.setOnClickListener {
-            if (binding.passwordLast.text.toString().equals(PeopleViewModel.userUse!!.password)){
+            if (binding.passwordLast.text.toString().equals(peopleViewModel.userUse!!.password)){
                 if (binding.newPasswordConfig.text.toString().equals(binding.repitPasswordConfig.text.toString())){
                     takeConfigNew()
                     activity?.recreate()
@@ -55,6 +58,6 @@ class UserFragment : Fragment() {
         var username = binding.usernameConfig.text.toString()
         if (username.equals(""))
             username=binding.profileUsername.text.toString()
-        PeopleViewModel.configUser(username,binding.newPasswordConfig.text.toString())
+        peopleViewModel.configUser(username,binding.newPasswordConfig.text.toString())
     }
 }

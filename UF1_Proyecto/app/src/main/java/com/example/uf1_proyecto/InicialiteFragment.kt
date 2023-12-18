@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.fragment.app.findFragment
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import com.example.uf1_proyecto.databinding.FragmentInicialiteBinding
 
@@ -16,18 +17,21 @@ class InicialiteFragment : Fragment() {
 
     var _binding : FragmentInicialiteBinding? = null
     val binding get() = _binding!!
+
+    private lateinit var peopleViewModel: PeopleViewModel
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         _binding = FragmentInicialiteBinding.inflate(inflater,container,false)
         val view = binding.root
+        peopleViewModel = ViewModelProvider(this).get(PeopleViewModel::class.java)
 
         binding.buttonRegister.setOnClickListener {
             view.findNavController().navigate(R.id.action_inicialiteFragment_to_registerFragment)
         }
         binding.buttonAccept.setOnClickListener {
-            if (PeopleViewModel.takeUser(binding.inicialiteUsername.text.toString(), binding.inicialitePassword.text.toString()) != null){
+            if (peopleViewModel.takeUser(binding.inicialiteUsername.text.toString(), binding.inicialitePassword.text.toString()) != null){
             var intent = Intent(activity, ContentActivity::class.java)
             startActivity( intent)
             }else{

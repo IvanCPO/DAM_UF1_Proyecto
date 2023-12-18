@@ -252,6 +252,13 @@
     </string-array>
 
     <string name="pregunta_color_favorito_2">¿Cuál es su color favorito?</string>
+    <string name="intro_resul">"Su resultado fue del "</string>
+    <string name="res_1">parece que no me conoces tanto como creias. Fijo que a la siguiente te sale</string>
+    <string name="res_2">parece que no congeniamos tanto... En fin, fue un placer. Que no te sienta mal</string>
+    <string name="res_3">parece que me conoces algo. Supongo que a veces hay suerte</string>
+    <string name="res_4">parece que tenemos algo en común</string>
+    <string name="res_5">no vale preguntarle a mi hermano o mis padres ehh!! Enhorabuena, sabes cosas de nivel familia</string>
+    <string name="res_6">somos dos gotas de agua jefe/a. Mima</string>
     <string-array name="opciones_color_favorito_2">
         <item>Azul</item>
         <item>Amarillo</item>

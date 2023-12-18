@@ -2,18 +2,15 @@ package com.example.uf1_proyecto
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.MenuItem
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.ActionBarDrawerToggle
 import androidx.appcompat.app.AlertDialog
-import androidx.cardview.widget.CardView
 import androidx.drawerlayout.widget.DrawerLayout
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.NavController
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
-import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupActionBarWithNavController
 import com.google.android.material.appbar.MaterialToolbar
 import com.google.android.material.navigation.NavigationView
@@ -21,9 +18,12 @@ import com.google.android.material.navigation.NavigationView
 class ContentActivity : AppCompatActivity() {
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var peopleViewModel: PeopleViewModel
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_content)
+
+        peopleViewModel = ViewModelProvider(this).get(PeopleViewModel::class.java)
 
         val toolbar = findViewById<MaterialToolbar>(R.id.toolbar_view)
         val navView = findViewById<NavigationView>(R.id.navigation_view)
@@ -72,8 +72,8 @@ class ContentActivity : AppCompatActivity() {
         super.onResume()
         var navigate = findViewById<NavigationView>(R.id.navigation_view)
         val header = navigate.getHeaderView(0)
-        header.findViewById<TextView>(R.id.actual_user).setText(PeopleViewModel.userUse!!.userName)
-        header.findViewById<ImageView>(R.id.profile_picture).setImageResource(PeopleViewModel.userUse!!.picture)
+        header.findViewById<TextView>(R.id.actual_user).setText(peopleViewModel.userUse!!.userName)
+        header.findViewById<ImageView>(R.id.profile_picture).setImageResource(peopleViewModel.userUse!!.picture)
     }
 
 
@@ -85,8 +85,7 @@ class ContentActivity : AppCompatActivity() {
         val builder = AlertDialog.Builder(this)
         builder.setMessage(getString(R.string.want_exit))
             .setPositiveButton(getString(R.string.yes_option)) { dialog, id ->
-                PeopleViewModel.saveListPeopleJson()
-                PeopleViewModel.userUse=null
+                peopleViewModel.exit()
                 finish()
             }
             .setNegativeButton(getString(R.string.no_option)) { dialog, id ->

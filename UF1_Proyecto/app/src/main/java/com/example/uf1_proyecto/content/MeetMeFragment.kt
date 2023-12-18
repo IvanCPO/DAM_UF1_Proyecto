@@ -8,9 +8,11 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
 import androidx.cardview.widget.CardView
+import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.uf1_proyecto.PeopleViewModel
 import com.example.uf1_proyecto.R
 import com.example.uf1_proyecto.adapter.ItemAdapter
 import com.example.uf1_proyecto.data.Datasource
@@ -24,6 +26,7 @@ class MeetMeFragment : Fragment() {
     private var _binding : FragmentMeetMeBinding? = null
     private val binding get() = _binding!!
     private var myDataset: List<Question>? = null
+    private lateinit var peopleViewModel: PeopleViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -31,6 +34,9 @@ class MeetMeFragment : Fragment() {
     ): View? {
         _binding = FragmentMeetMeBinding.inflate(inflater,container,false)
         val view = binding.root
+
+        peopleViewModel = ViewModelProvider(this).get(PeopleViewModel::class.java)
+
         myDataset = Datasource(requireContext()).loadQuestionsIvan().shuffled().take(6)
         val recyclerView = binding.recyclerView
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -53,7 +59,9 @@ class MeetMeFragment : Fragment() {
                         puntaje++
                     }
                 }
-
+                Toast.makeText(requireContext(), "Resultado: $puntaje    numPreguntas: ${questions.size}", Toast.LENGTH_SHORT).show()
+                peopleViewModel.setMeet()
+                peopleViewModel.setResult(questions.size,puntaje)
                 view.findNavController().navigate(R.id.action_meetMeFragment_to_resultFragment)
             }
         }
